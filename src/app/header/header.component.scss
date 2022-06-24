@@ -1,0 +1,30 @@
+.Notifications {
+  width: auto;
+  height: auto;
+  position: absolute;
+  right: 77px;
+  z-index: 5;
+  box-shadow: 0 0 7px #c2c2c2;
+  background-color: white;
+}
+.highlight {
+  color: red;
+}
+.textalign {
+  text-align: left;
+}
+.Login {
+  width: 10%;
+  height: auto;
+  position: absolute;
+  right: 30px;
+  z-index: 5;
+  box-shadow: 0 0 7px #c2c2c2;
+  background-color: white;
+  box-sizing: border-box;
+}
+.TransBtn {
+  background: none;
+  border: none;
+  border-radius: 30px;
+}

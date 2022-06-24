@@ -1,0 +1,8 @@
+.formz {
+  height: 100% !important;
+  border: 1px solid;
+  overflow-y: scroll;
+}
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}

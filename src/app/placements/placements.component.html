@@ -1,0 +1,27 @@
+<div class="col-12 place">
+  <div *ngFor="let item of company">
+    <div class="card float-start m-2" style="width: 18rem">
+      <img
+        class="card-img-top height"
+        src="{{ item.img }}"
+        alt="Card image cap"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ item.name }}</h5>
+      </div>
+      <hr />
+      <div>
+        <span class="p-2">{{ item.key1 }} : </span
+        ><span class="ps-2">{{ item.location }}</span>
+      </div>
+      <div>
+        <span class="p-2">{{ item.key2 }} : </span
+        ><span class="ps-2">{{ item.package }}</span>
+      </div>
+      <div>
+        <span class="p-2">{{ item.key3 }} : </span
+        ><span class="p-2">{{ item.position }}</span>
+      </div>
+    </div>
+  </div>
+</div>

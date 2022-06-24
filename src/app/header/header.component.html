@@ -1,0 +1,55 @@
+<div class="col-12 p-2 d-flex align-items-center justifu-content-between">
+  <img [src]="srcPath" alt="logo" [height]="size" [width]="size" />
+  <h1 class="border-start ps-4 m-0">{{ title }}</h1>
+  <div class="btn ms-auto">
+    <button
+      [ngStyle]="ShowNotification ? { background: 'red', color: 'white' } : {}"
+      class="m-2 TransBtn"
+      (click)="togglenotifications()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-bell-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"
+        />
+      </svg>
+    </button>
+    <div *ngIf="ShowNotification" class="Notifications">
+      <ul class="d-block">
+        <li class="textalign">Books due date on : 25th may</li>
+        <li class="textalign highlight">Results are out go check now!</li>
+        <li class="textalign">Exam timetable is out for 2nd semister</li>
+      </ul>
+    </div>
+    <button
+      [ngStyle]="ShowLogin ? { background: 'red', color: 'white' } : {}"
+      class="m-2 TransBtn"
+      (click)="togglelogin()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-person-fill"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+        />
+      </svg>
+    </button>
+    <div *ngIf="ShowLogin" class="Login">
+      <button class="btn btn-primary col-12 p-1 mb-1">Profile</button>
+      <button routerLink="/login" class="btn btn-primary col-12 p-1">
+        Login
+      </button>
+    </div>
+  </div>
+</div>

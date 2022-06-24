@@ -1,0 +1,26 @@
+<div class="col-12 text-end">
+  {{ CurrentDate | date: "medium" }}
+</div>
+<hr />
+<table class="table table-striped">
+  <tr>
+    <th *ngFor="let item of dataService.headings">
+      {{ item.title }}
+    </th>
+  </tr>
+  <tr
+    [ngClass]="i % 2 == 0 ? 'bg-warning' : 'bg-info'"
+    *ngFor="let item of dataService.courses; let i = index"
+  >
+    <td>{{ i + 1 | squareORcube: "" }}</td>
+    <td>{{ item.courses | uppercase }}</td>
+    <td>{{ item.intake }}</td>
+    <td [ngClass]="item.govtseats < 15 ? 'bg-danger' : ''">
+      {{ item.govtseats }}
+    </td>
+    <td>{{ item.IndianFee | currency: "INR" }}</td>
+    <td>{{ item.ForignFee | currency }}</td>
+  </tr>
+</table>
+
+<div class="btn btn-success" (click)="dataService.changes()">change</div>

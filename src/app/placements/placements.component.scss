@@ -1,0 +1,11 @@
+div.place {
+  height: 100% !important;
+  border: 1px solid;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.height {
+  height: 14rem !important;
+}

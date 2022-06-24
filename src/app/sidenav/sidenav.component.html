@@ -1,0 +1,10 @@
+<div>
+  <button
+    *ngFor="let item of buttons"
+    [routerLink]="item.link"
+    [routerLinkActiveOptions]="{ exact: true }"
+    routerLinkActive="active"
+  >
+    {{ item.BtnContent }}
+  </button>
+</div>

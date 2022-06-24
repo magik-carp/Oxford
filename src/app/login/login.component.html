@@ -1,0 +1,59 @@
+<form
+  class="p-2"
+  #localVariable="ngForm"
+  (ngSubmit)="onSubmission(localVariable)"
+>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input
+      name="email"
+      type="email"
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      ngModel
+      required
+      #email="ngModel"
+      pattern="[a-z]+[a-z0-9._-]+@[a-z]+\.[a-z.]{2,3}"
+    />
+    <div
+      *ngIf="email.invalid && email.touched"
+      id="emailHelp"
+      class="form-text text-danger"
+    >
+      Please enter a Valied email ID
+    </div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input
+      [(ngModel)]="userInputPassword"
+      name="password"
+      type="password"
+      class="form-control"
+      id="exampleInputPassword1"
+      ngModel
+      required
+      maxlength="10"
+      minlength="8"
+      #password="ngModel"
+    />
+    <div
+      *ngIf="password.invalid && password.touched"
+      id="emailHelp"
+      class="form-text text-danger"
+    >
+      Please enter a valied password
+    </div>
+  </div>
+  <div class="mb-3">
+    Not registered yet ? click <a routerLink="/register">here</a> to register
+  </div>
+  <button
+    [disabled]="localVariable.invalid"
+    type="submit"
+    class="btn btn-primary"
+  >
+    Submit
+  </button>
+</form>
